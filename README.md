@@ -2,7 +2,7 @@
 
 Public, dependency-free landing, privacy, and support pages for PhotoTidy.
 
-- Landing page: `/`
+- Landing pages: `/` (English) and `/it/` (Italian)
 - English: `/privacy/` and `/support/`
 - Italian: `/it/privacy/` and `/it/support/`
 
