@@ -92,6 +92,12 @@ h1, h2 { margin: 0; font-family: var(--font-display), sans-serif; font-weight: 6
 h1 { font-size: clamp(66px, 7.4vw, 112px); }
 h2 { font-size: clamp(54px, 6.4vw, 88px); }
 h1 em, h2 em { color: var(--blue); font-style: normal; }
+
+@media (min-width: 701px) {
+  h1 br, h2 br { display: none; }
+  h1 em, h2 em { display: block; margin-top: .18em; }
+}
+
 .hero-description { max-width: 545px; margin: 34px 0 0; color: #525351; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.65; }
 .hero-actions { display: flex; align-items: center; gap: clamp(18px, 2vw, 28px); margin-top: 36px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 54px; padding: 0 22px; border-radius: 999px; font-size: 14px; font-weight: 750; transition: transform .2s ease, box-shadow .2s ease; }
