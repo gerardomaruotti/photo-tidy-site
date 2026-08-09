@@ -88,7 +88,7 @@ main { overflow: hidden; }
 .eyebrow > span { width: 24px; height: 2px; background: var(--blue); }
 .eyebrow.light { color: rgba(255,255,255,.74); }
 .eyebrow.light > span { background: var(--lime); }
-h1, h2 { margin: 0; font-family: var(--font-display), sans-serif; font-weight: 650; letter-spacing: -.072em; line-height: .93; }
+h1, h2 { margin: 0; font-family: var(--font-display), sans-serif; font-weight: 650; letter-spacing: -.072em; line-height: 1.02; }
 h1 { font-size: clamp(66px, 7.4vw, 112px); }
 h2 { font-size: clamp(54px, 6.4vw, 88px); }
 h1 em, h2 em { color: var(--blue); font-style: normal; }
