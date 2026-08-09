@@ -233,9 +233,9 @@ footer > p { color: var(--muted); text-align: center; font-size: 11px; } footer 
   .hero-copy .eyebrow, .hero-actions { justify-content: center; }
   .hero-description { margin-left: auto; margin-right: auto; }
   .hero-visual { width: min(700px, 100%); margin: 10px auto 0; }
-  .compare-section { grid-template-columns: 1fr; gap: 70px; }
+  .compare-section { grid-template-columns: 1fr; justify-items: center; gap: 70px; }
   .compare-gallery { width: min(600px, 100%); margin: 0 auto; }
-  .compare-copy { max-width: 620px; }
+  .compare-copy { width: 100%; max-width: 620px; margin: 0 auto; }
   .privacy-grid { grid-template-columns: .7fr 1.3fr; }
   .privacy-list { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3,1fr); }
   .privacy-list > div { padding-right: 20px; }
@@ -278,6 +278,10 @@ footer > p { color: var(--muted); text-align: center; font-size: 11px; } footer 
   .feature-art { height: 205px; }
   .discovery-photos img { width: 118px; height: 154px; }
   .compare-gallery { min-height: 500px; }
+  .compare-copy { text-align: center; }
+  .compare-copy .eyebrow { justify-content: center; }
+  .compare-copy > p:not(.eyebrow) { margin-inline: auto; }
+  .compare-copy ul { width: min(465px, 100%); margin-inline: auto; text-align: left; }
   .screen-card { width: 205px; }
   .card-back { left: 125px; }.card-middle { left: 8px; }.card-front { left: 82px; }
   .gallery-note { display: none; }
