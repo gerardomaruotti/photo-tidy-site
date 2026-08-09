@@ -200,7 +200,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .detail-list > div > span svg { width: 21px; height: 21px; stroke-width: 1.9; }
 .detail-list h3 { margin: 1px 0 6px; font: 700 20px/1.2 var(--font-display), sans-serif; letter-spacing: -.04em; }.detail-list p { margin: 0; color: var(--muted); font-size: 13px; }
 
-.faq { display: grid; grid-template-columns: .75fr 1.25fr; gap: 90px; }
+.faq { display: grid; grid-template-columns: .75fr 1.25fr; align-items: start; gap: 90px; }
 .faq-list { border-top: 1px solid var(--ink); }
 .faq-list details { border-bottom: 1px solid var(--line); }
 .faq-list summary { padding: 25px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-weight: 750; }
