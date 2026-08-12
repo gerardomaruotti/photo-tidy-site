@@ -277,13 +277,15 @@ footer > p { color: var(--muted); text-align: center; font-size: 11px; } footer 
   .feature-card:last-child h3 { font-size: clamp(28px, 9vw, 36px); }
   .feature-art { height: 205px; }
   .discovery-photos img { width: 118px; height: 154px; }
-  .compare-gallery { min-height: 500px; }
+  .compare-gallery { width: min(100%, 380px); min-height: 500px; margin-inline: auto; }
   .compare-copy { text-align: center; }
   .compare-copy .eyebrow { justify-content: center; }
   .compare-copy > p:not(.eyebrow) { margin-inline: auto; }
   .compare-copy ul { width: min(465px, 100%); margin-inline: auto; text-align: left; }
-  .screen-card { width: 205px; }
-  .card-back { left: 125px; }.card-middle { left: 8px; }.card-front { left: 82px; }
+  .screen-card { width: min(180px, 48vw); }
+  .card-back { left: calc(50% - 51px); }
+  .card-middle { left: max(20px, calc(50% - 140px)); }
+  .card-front { left: calc(50% - 72px); }
   .gallery-note { display: none; }
   .privacy-grid { min-height: auto; padding: 100px 0; grid-template-columns: 1fr; text-align: center; }
   .privacy-badge { margin: 0 auto; transform: scale(.8); }
@@ -304,6 +306,9 @@ footer > p { color: var(--muted); text-align: center; font-size: 11px; } footer 
 
 @media (max-width: 360px) {
   .brand > span { display: none; }
+  .card-back { left: calc(50% - 43px); }
+  .card-middle { left: max(28px, calc(50% - 132px)); }
+  .card-front { left: calc(50% - 64px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
