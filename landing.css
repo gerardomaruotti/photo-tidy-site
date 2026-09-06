@@ -51,7 +51,7 @@ figcaption{display:flex;align-items:center;justify-content:center;gap:14px;margi
 .story-enhanced .steps figure{height:75svh;max-width:none;justify-content:center;align-items:start;opacity:1;transform:none;transition:none}
 .story-enhanced .steps figure:last-child{height:100svh}
 .story-enhanced .steps .device-stage{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.story-enhanced figcaption{justify-content:start;text-align:left;font-family:"DM Sans",sans-serif;font-size:clamp(28px,3vw,40px);letter-spacing:-.035em;color:#a8bad5;margin:0;transition:color 350ms}
+.story-enhanced figcaption{justify-content:start;gap:24px;text-align:left;font-family:"DM Sans",sans-serif;font-size:clamp(28px,3vw,40px);letter-spacing:-.035em;color:#a8bad5;margin:0;transition:color 350ms}
 .story-enhanced .is-current figcaption{color:#fff}
 .story-enhanced .is-current .step-number{color:#fff;background:#2469d8;border-color:#67a7ff}
 .story-enhanced .step-number{flex-basis:36px;height:36px;font-family:Manrope,sans-serif;letter-spacing:0;transition:background-color 350ms,border-color 350ms}
