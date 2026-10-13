@@ -127,3 +127,63 @@
     configure();
   } catch { fail(); }
 })();
+
+// Launch notification sign-up. The form stays hidden until its Formspree
+// endpoint replaces the YOUR_FORM_ID placeholder in index.html and it/index.html.
+(() => {
+  const box = document.querySelector('[data-notify]');
+  const form = box?.querySelector('[data-notify-form]');
+  if (!form || form.getAttribute('action').includes('YOUR_FORM_ID')) return;
+  box.hidden = false;
+
+  const messages = {
+    en: {
+      sending: 'Sending…',
+      error: 'We couldn’t send your email. Please try again in a moment.',
+      limited: 'Too many requests right now. Please try again later.'
+    },
+    it: {
+      sending: 'Invio…',
+      error: 'Non siamo riusciti a inviare la tua email. Riprova tra poco.',
+      limited: 'Ci sono troppe richieste al momento. Riprova più tardi.'
+    }
+  };
+  const copy = messages[form.dataset.locale] || messages.en;
+  const button = form.querySelector('button[type="submit"]');
+  const readyLabel = button.textContent;
+  const status = box.querySelector('[data-form-message]');
+  const note = box.querySelector('[data-notify-note]');
+  const success = box.querySelector('[data-notify-success]');
+  let busy = false;
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (busy || !form.reportValidity()) return;
+    busy = true;
+    button.disabled = true;
+    button.textContent = copy.sending;
+    status.textContent = '';
+    delete status.dataset.state;
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!response.ok) throw new Error(response.status === 429 ? 'limited' : 'failed');
+      form.reset();
+      form.hidden = true;
+      note.hidden = true;
+      status.hidden = true;
+      success.hidden = false;
+      success.focus();
+    } catch (error) {
+      status.textContent = error.message === 'limited' ? copy.limited : copy.error;
+      status.dataset.state = 'error';
+      status.focus();
+      busy = false;
+      button.disabled = false;
+      button.textContent = readyLabel;
+    }
+  });
+})();
