@@ -51,22 +51,11 @@
 <!-- LAUNCH TOGGLE (App Store badge): when the app is live, uncomment this link (it sits beside the TestFlight button; CSS for
      .appstore-badge already exists in landing.css). Replace 000000000 with the numeric Apple ID (same one used for the Smart App Banner in <head>).
      Download the official Italian “Scarica dall’App Store” badge SVG from https://developer.apple.com/app-store/marketing/guidelines/ and save it as assets/badges/download-on-the-app-store-it.svg
-     (create assets/badges/). Do not recolor or redraw the badge. After launch, retire the data-notify block below and decide whether to keep the TestFlight button.
+     (create assets/badges/). Do not recolor or redraw the badge. After launch, decide whether to keep the TestFlight button.
 <a class="appstore-badge" href="https://apps.apple.com/it/app/id000000000"><img src="../assets/badges/download-on-the-app-store-it.svg" height="54" alt="Scarica dall’App Store"></a>
 -->
 </div><small>Beta per iPhone e iPad</small>
-<div class="notify" data-notify hidden>
-<form class="notify-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" aria-labelledby="notify-title" data-notify-form data-locale="it">
-<!-- FORM ENDPOINT PLACEHOLDER: replace YOUR_FORM_ID in the action above (and in index.html) with the Formspree form ID, e.g. https://formspree.io/f/abcdwxyz.
-     While the value contains YOUR_FORM_ID, landing.js keeps this whole block hidden so visitors never see a broken form. -->
-<p class="notify-title" id="notify-title">Ricevi un avviso al lancio</p>
-<input type="hidden" name="language" value="it"><input type="hidden" name="_subject" value="PhotoTidy launch notification signup">
-<div class="notify-row"><label class="visually-hidden" for="notify-email">Indirizzo email</label><input id="notify-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="Il tuo indirizzo email" maxlength="254" required><div class="honeypot" aria-hidden="true"><label for="notify-company">Azienda</label><input id="notify-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div><button type="submit">Avvisami</button></div>
-</form>
-<p class="form-message" data-form-message role="status" aria-live="polite" tabindex="-1"></p>
-<p class="notify-note" data-notify-note>Una sola email al lancio di PhotoTidy. Nient’altro. <a href="privacy/#launch-list">Privacy</a></p>
-<div class="notify-success" data-notify-success role="status" aria-live="polite" tabindex="-1" hidden><strong>Grazie, sei nella lista.</strong><p>Ti scriveremo una sola volta, al lancio di PhotoTidy.</p></div>
-</div></div>
+</div>
 <div class="hero-visual"><div class="phone"><img src="../assets/screenshots/compare-framed-20260906.png" srcset="../assets/screenshots/compare-framed-20260906-736.webp 736w, ../assets/screenshots/compare-framed-20260906-1104.webp 1104w" sizes="(max-width: 700px) 280px, (max-width: 1000px) 32vw, 340px" width="1350" height="2760" alt="Interfaccia PhotoTidy: Tieni i tuoi preferiti" fetchpriority="high" decoding="async"></div></div></section>
 <section class="walkthrough" id="how-it-works" aria-labelledby="walk-title">
 <div class="container">
