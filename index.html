@@ -7,23 +7,35 @@
   <meta property="og:title" content="PhotoTidy — Private photo cleanup for iPhone">
   <meta property="og:description" content="Find duplicates and similar shots, compare the best, and reclaim space. Every PhotoTidy scan runs privately on your device.">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PhotoTidy">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="it_IT">
   <meta property="og:url" content="https://gerardomaruotti.github.io/photo-tidy-site/">
   <meta property="og:image" content="https://gerardomaruotti.github.io/photo-tidy-site/assets/og-depth-20260906.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PhotoTidy on iPhone comparing similar photos: “More keepers. Less clutter.”">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PhotoTidy — Private photo cleanup for iPhone">
   <meta name="twitter:description" content="Find duplicates and similar shots, compare the best, and reclaim space. Every PhotoTidy scan runs privately on your device.">
   <meta name="twitter:image" content="https://gerardomaruotti.github.io/photo-tidy-site/assets/og-depth-20260906.png">
+  <meta name="twitter:image:alt" content="PhotoTidy on iPhone comparing similar photos: “More keepers. Less clutter.”">
+  <!-- LAUNCH TOGGLE (App Store Smart App Banner): once the app is live on the App Store, uncomment this tag and
+       replace 000000000 with the numeric Apple ID (App Store Connect > App Information > General Information > Apple ID;
+       also the digits after "id" in the App Store URL). Safari on iOS/iPadOS then shows a banner with an Open/View button.
+       Keep the same tag in index.html and it/index.html. Optional: add ", app-argument=https://gerardomaruotti.github.io/photo-tidy-site/" to deep-link. -->
+  <!-- <meta name="apple-itunes-app" content="app-id=000000000"> -->
   <link rel="canonical" href="https://gerardomaruotti.github.io/photo-tidy-site/">
   <link rel="alternate" hreflang="en" href="https://gerardomaruotti.github.io/photo-tidy-site/">
   <link rel="alternate" hreflang="it" href="https://gerardomaruotti.github.io/photo-tidy-site/it/">
   <link rel="alternate" hreflang="x-default" href="https://gerardomaruotti.github.io/photo-tidy-site/">
   <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="landing.css?v=20260906-spacing">
+  <link rel="stylesheet" href="landing.css?v=20261013-launch">
   <title>PhotoTidy — Private photo cleanup for iPhone</title>
-<script src="landing.js?v=20260906-depth" defer></script>
+<script src="landing.js?v=20261013-launch" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -35,7 +47,26 @@
 </nav></header>
 <main id="main">
 <section class="hero container" id="top" aria-labelledby="hero-title">
-<div class="hero-copy"><h1 id="hero-title">More keepers.<br><span>Less clutter.</span></h1><p>Find duplicates and look-alikes, then choose what stays.</p><a class="button" href="https://testflight.apple.com/join/RuyQJqvQ">Join TestFlight</a><small>Beta for iPhone and iPad</small></div>
+<div class="hero-copy"><h1 id="hero-title">More keepers.<br><span>Less clutter.</span></h1><p>Find duplicates and look-alikes, then choose what stays.</p><div class="cta-row"><a class="button" href="https://testflight.apple.com/join/RuyQJqvQ">Join TestFlight</a>
+<!-- LAUNCH TOGGLE (App Store badge): when the app is live, uncomment this link (it sits beside the TestFlight button; CSS for
+     .appstore-badge already exists in landing.css). Replace 000000000 with the numeric Apple ID (same one used for the Smart App Banner in <head>).
+     Download the official English “Download on the App Store” badge SVG from https://developer.apple.com/app-store/marketing/guidelines/ and save it as assets/badges/download-on-the-app-store-en.svg
+     (create assets/badges/). Do not recolor or redraw the badge. After launch, retire the data-notify block below and decide whether to keep the TestFlight button.
+<a class="appstore-badge" href="https://apps.apple.com/us/app/id000000000"><img src="assets/badges/download-on-the-app-store-en.svg" height="54" alt="Download on the App Store"></a>
+-->
+</div><small>Beta for iPhone and iPad</small>
+<div class="notify" data-notify hidden>
+<form class="notify-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" aria-labelledby="notify-title" data-notify-form data-locale="en">
+<!-- FORM ENDPOINT PLACEHOLDER: replace YOUR_FORM_ID in the action above (and in it/index.html) with the Formspree form ID, e.g. https://formspree.io/f/abcdwxyz.
+     While the value contains YOUR_FORM_ID, landing.js keeps this whole block hidden so visitors never see a broken form. -->
+<p class="notify-title" id="notify-title">Get notified at launch</p>
+<input type="hidden" name="language" value="en"><input type="hidden" name="_subject" value="PhotoTidy launch notification signup">
+<div class="notify-row"><label class="visually-hidden" for="notify-email">Email address</label><input id="notify-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="Your email address" maxlength="254" required><div class="honeypot" aria-hidden="true"><label for="notify-company">Company</label><input id="notify-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div><button type="submit">Notify me</button></div>
+</form>
+<p class="form-message" data-form-message role="status" aria-live="polite" tabindex="-1"></p>
+<p class="notify-note" data-notify-note>One email when PhotoTidy launches. Nothing else. <a href="privacy/#launch-list">Privacy</a></p>
+<div class="notify-success" data-notify-success role="status" aria-live="polite" tabindex="-1" hidden><strong>Thanks, you’re on the list.</strong><p>We’ll email you once, when PhotoTidy launches.</p></div>
+</div></div>
 <div class="hero-visual"><div class="phone"><img src="assets/screenshots/compare-framed-20260906.png" srcset="assets/screenshots/compare-framed-20260906-736.webp 736w, assets/screenshots/compare-framed-20260906-1104.webp 1104w" sizes="(max-width: 700px) 280px, (max-width: 1000px) 32vw, 340px" width="1350" height="2760" alt="PhotoTidy interface: Keep your favorites" fetchpriority="high" decoding="async"></div></div></section>
 <section class="walkthrough" id="how-it-works" aria-labelledby="walk-title">
 <div class="container">

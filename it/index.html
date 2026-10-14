@@ -7,23 +7,35 @@
   <meta property="og:title" content="PhotoTidy — Pulizia privata delle foto su iPhone">
   <meta property="og:description" content="Trova duplicati e scatti simili, confronta i migliori e libera spazio. Ogni scansione di PhotoTidy avviene privatamente sul dispositivo.">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PhotoTidy">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://gerardomaruotti.github.io/photo-tidy-site/it/">
-  <meta property="og:image" content="https://gerardomaruotti.github.io/photo-tidy-site/assets/og-depth-20260906.png">
+  <meta property="og:image" content="https://gerardomaruotti.github.io/photo-tidy-site/assets/og-it-20261013.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PhotoTidy su iPhone mentre confronta foto simili: “Più ricordi. Meno doppioni.”">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PhotoTidy — Pulizia privata delle foto su iPhone">
   <meta name="twitter:description" content="Trova duplicati e scatti simili, confronta i migliori e libera spazio. Ogni scansione di PhotoTidy avviene privatamente sul dispositivo.">
-  <meta name="twitter:image" content="https://gerardomaruotti.github.io/photo-tidy-site/assets/og-depth-20260906.png">
+  <meta name="twitter:image" content="https://gerardomaruotti.github.io/photo-tidy-site/assets/og-it-20261013.png">
+  <meta name="twitter:image:alt" content="PhotoTidy su iPhone mentre confronta foto simili: “Più ricordi. Meno doppioni.”">
+  <!-- LAUNCH TOGGLE (App Store Smart App Banner): once the app is live on the App Store, uncomment this tag and
+       replace 000000000 with the numeric Apple ID (App Store Connect > App Information > General Information > Apple ID;
+       also the digits after "id" in the App Store URL). Safari on iOS/iPadOS then shows a banner with an Open/View button.
+       Keep the same tag in index.html and it/index.html. Optional: add ", app-argument=https://gerardomaruotti.github.io/photo-tidy-site/" to deep-link. -->
+  <!-- <meta name="apple-itunes-app" content="app-id=000000000"> -->
   <link rel="canonical" href="https://gerardomaruotti.github.io/photo-tidy-site/it/">
   <link rel="alternate" hreflang="en" href="https://gerardomaruotti.github.io/photo-tidy-site/">
   <link rel="alternate" hreflang="it" href="https://gerardomaruotti.github.io/photo-tidy-site/it/">
   <link rel="alternate" hreflang="x-default" href="https://gerardomaruotti.github.io/photo-tidy-site/">
   <link rel="icon" type="image/png" sizes="256x256" href="../assets/favicon.png">
-  <link rel="apple-touch-icon" href="../assets/app-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="preload" href="../assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../landing.css?v=20260906-spacing">
+  <link rel="stylesheet" href="../landing.css?v=20261013-launch">
   <title>PhotoTidy — Pulizia privata delle foto su iPhone</title>
-<script src="../landing.js?v=20260906-depth" defer></script>
+<script src="../landing.js?v=20261013-launch" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Vai al contenuto</a>
@@ -35,7 +47,26 @@
 </nav></header>
 <main id="main">
 <section class="hero container" id="top" aria-labelledby="hero-title">
-<div class="hero-copy"><h1 id="hero-title">Più ricordi.<br><span>Meno doppioni.</span></h1><p>Trova duplicati e scatti simili, poi scegli cosa tenere.</p><a class="button" href="https://testflight.apple.com/join/RuyQJqvQ">Prova su TestFlight</a><small>Beta per iPhone e iPad</small></div>
+<div class="hero-copy"><h1 id="hero-title">Più ricordi.<br><span>Meno doppioni.</span></h1><p>Trova duplicati e scatti simili, poi scegli cosa tenere.</p><div class="cta-row"><a class="button" href="https://testflight.apple.com/join/RuyQJqvQ">Prova su TestFlight</a>
+<!-- LAUNCH TOGGLE (App Store badge): when the app is live, uncomment this link (it sits beside the TestFlight button; CSS for
+     .appstore-badge already exists in landing.css). Replace 000000000 with the numeric Apple ID (same one used for the Smart App Banner in <head>).
+     Download the official Italian “Scarica dall’App Store” badge SVG from https://developer.apple.com/app-store/marketing/guidelines/ and save it as assets/badges/download-on-the-app-store-it.svg
+     (create assets/badges/). Do not recolor or redraw the badge. After launch, retire the data-notify block below and decide whether to keep the TestFlight button.
+<a class="appstore-badge" href="https://apps.apple.com/it/app/id000000000"><img src="../assets/badges/download-on-the-app-store-it.svg" height="54" alt="Scarica dall’App Store"></a>
+-->
+</div><small>Beta per iPhone e iPad</small>
+<div class="notify" data-notify hidden>
+<form class="notify-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" aria-labelledby="notify-title" data-notify-form data-locale="it">
+<!-- FORM ENDPOINT PLACEHOLDER: replace YOUR_FORM_ID in the action above (and in index.html) with the Formspree form ID, e.g. https://formspree.io/f/abcdwxyz.
+     While the value contains YOUR_FORM_ID, landing.js keeps this whole block hidden so visitors never see a broken form. -->
+<p class="notify-title" id="notify-title">Ricevi un avviso al lancio</p>
+<input type="hidden" name="language" value="it"><input type="hidden" name="_subject" value="PhotoTidy launch notification signup">
+<div class="notify-row"><label class="visually-hidden" for="notify-email">Indirizzo email</label><input id="notify-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="Il tuo indirizzo email" maxlength="254" required><div class="honeypot" aria-hidden="true"><label for="notify-company">Azienda</label><input id="notify-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div><button type="submit">Avvisami</button></div>
+</form>
+<p class="form-message" data-form-message role="status" aria-live="polite" tabindex="-1"></p>
+<p class="notify-note" data-notify-note>Una sola email al lancio di PhotoTidy. Nient’altro. <a href="privacy/#launch-list">Privacy</a></p>
+<div class="notify-success" data-notify-success role="status" aria-live="polite" tabindex="-1" hidden><strong>Grazie, sei nella lista.</strong><p>Ti scriveremo una sola volta, al lancio di PhotoTidy.</p></div>
+</div></div>
 <div class="hero-visual"><div class="phone"><img src="../assets/screenshots/compare-framed-20260906.png" srcset="../assets/screenshots/compare-framed-20260906-736.webp 736w, ../assets/screenshots/compare-framed-20260906-1104.webp 1104w" sizes="(max-width: 700px) 280px, (max-width: 1000px) 32vw, 340px" width="1350" height="2760" alt="Interfaccia PhotoTidy: Tieni i tuoi preferiti" fetchpriority="high" decoding="async"></div></div></section>
 <section class="walkthrough" id="how-it-works" aria-labelledby="walk-title">
 <div class="container">

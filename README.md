@@ -6,7 +6,7 @@ Public, dependency-free landing, privacy, and support pages for PhotoTidy.
 - English: `/privacy/` and `/support/`
 - Italian: `/it/privacy/` and `/it/support/`
 
-The site intentionally uses no cookies, analytics, third-party scripts, build tools, or application source. Landing-page fonts and imagery are self-hosted in `assets/`.
+The site intentionally uses no cookies, analytics, third-party scripts, build tools, or application source. Landing-page fonts and imagery are self-hosted in `assets/`. The one third-party interaction is the optional launch-notification form, which posts the visitor's email to Formspree only when they submit it (disclosed in both privacy pages).
 
 ## Screenshot assets
 
@@ -19,3 +19,20 @@ Use `frames -d "iPhone 17 Pro Portrait" -c Silver capture.png`, then export prop
 With Playwright and its Chromium/WebKit browsers available to Node, serve this directory on port 4173 and run `node scripts/verify-landing.cjs`. Set `SITE_URL` (including its trailing slash) to check a different preview. This development-only check covers both languages, responsive layouts, scroll chapters, fallback behavior, keyboard focus, FAQs, and scroll restoration; Playwright is not shipped to site visitors.
 
 The navy story enhances only at 1024px × 700px or larger, after screenshot decoding succeeds. Reduced motion and smaller windows retain the vertical figures. Scroll positions are measured at setup/resize, not on every frame. Keep real screenshots and their semantic descriptions in the ordinary figures; the sticky copies are decorative.
+
+## Launch notification form
+
+Both landing pages contain a "Get notified at launch" form (`[data-notify]` in the hero), following the same Formspree pattern as `gatherkeep-site`: it posts `email`, `language`, `_subject`, and a `_gotcha` honeypot, and `landing.js` submits it with `fetch` and shows an inline success or error message.
+
+The form action is the placeholder `https://formspree.io/f/YOUR_FORM_ID`. While the placeholder is present, `landing.js` keeps the whole block hidden, so nothing broken is shown to visitors. To enable it, create a Formspree form and replace `YOUR_FORM_ID` in **both** `index.html` and `it/index.html`. No credentials belong in this repository. Review `/privacy/#launch-list` and `/it/privacy/#launch-list` if retention or notification settings differ from what they promise.
+
+## App Store launch checklist
+
+1. In `index.html` and `it/index.html`, uncomment the `apple-itunes-app` Smart App Banner meta tag in `<head>` and replace `000000000` with the numeric Apple ID (App Store Connect → App Information → General Information → Apple ID, or the digits after `id` in the App Store URL).
+2. Download the official English and Italian "Download on the App Store" badge SVGs from Apple's [marketing guidelines](https://developer.apple.com/app-store/marketing/guidelines/), save them as `assets/badges/download-on-the-app-store-en.svg` and `-it.svg`, and uncomment the `.appstore-badge` link in each hero's `.cta-row` (replace `000000000` there too). Do not recolor or redraw the badge. The badge and the Smart App Banner are intentionally not shipped yet because the app has no App Store ID.
+3. Retire the `[data-notify]` block, update the TestFlight button and header link as needed, and bump the `?v=` query strings on `landing.css` and `landing.js`.
+
+## Social previews and icons
+
+- `assets/og-depth-20260906.png` is the English Open Graph/Twitter image; `assets/og-it-20261013.png` is the Italian equivalent used by `/it/` (same layout, 1200×630, headline and subtitle in Italian). The app screenshot inside both is the current English UI capture.
+- `assets/apple-touch-icon.png` (180×180, opaque) is used by every page. It is resampled from the 120 px `app-icon.png`; replace it with a 180 px export from the 1024 px icon master for a sharper result.
